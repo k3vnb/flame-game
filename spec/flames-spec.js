@@ -29,6 +29,10 @@ describe('HotFlame', function() {
     burn.flameLevel = 100;
     expect(burn.didYouGetBurned()).toEqual(true);
   });
+  it('should be see faster growth', function() {
+    burn.flameLevel = 51;
+    expect(burn.isTimeAlmostUp()).toEqual(true);
+  });
 
   it('should be consumed in flames if 75 seconds go by', function() {
     jasmine.clock().tick(75001);
@@ -38,6 +42,13 @@ describe('HotFlame', function() {
   it('should return that the fire was somewhat extinguished and the flameLevel should go down by 5', function() {
     expect(burn.waterSmall("cup of water")).toEqual("You doused that flame with the cup of water! Flame level decreased by 5 percent");
     expect(burn.flameLevel).toEqual(20);
+  });
+
+  it('should change the growth rate to 500ms once the flameLevel reaches 51', function() {
+    // jasmine.clock().tick(5001);
+    // expect(burn.interval).toEqual(1000);
+    burn.flameLevel = 55;
+    expect(burn.interval).toEqual(500);
   });
 
 }); //end of describe('Hot Flame' function)
