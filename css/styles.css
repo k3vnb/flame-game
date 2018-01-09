@@ -3,3 +3,9 @@
   width: 100px;
   background-color: lightgrey;
 }
+
+#fire {
+  background-image: url(../img/flame.gif);
+  height: 50px;
+  width: 50px;
+}

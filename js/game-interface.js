@@ -4,8 +4,16 @@ $(document).ready(function(){
   $('#go').click(function(event){
     // event.PreventDefault();
     flame.setGrowth();
-    // $('#counter').empty().append(flame.flameLevel);
     setInterval(() => {$('#counter').empty().append(flame.flameLevel);
-  }, 500);
+    // $('.container').append(`<div id="fire"></div>`);
+    }, 500);
+  });
+
+  $('#match').click(function(event){
+    flame.gasSmall();
+  });
+
+  $('#glass').click(function(event){
+    flame.waterSmall();
   });
 });

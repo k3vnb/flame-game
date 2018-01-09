@@ -37,7 +37,7 @@ export let flame = {
     let that = this;
     return function(water) {
       that.flameLevel -= amount;
-      return `You doused that flame with the ${water}! Flame level decreased by ${amount} percent`;
+      return `Flame level has changed by ${amount}`;
     };
   },
 
