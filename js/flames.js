@@ -1,14 +1,22 @@
+
 export let flame = {
   flameLevel: 25,
   interval: 1000,
 
+
   setGrowth: function() {
     let growthInterval = setInterval(() => {
       this.flameLevel++;
+      console.log(this.flameLevel);
       if (this.didYouGetBurned() == true) {
         clearInterval(growthInterval);
         return "You burned up!";
-      }
+      };
+      // if (this.isTimeAlmostUp() == true) {
+      //   clearInterval(growthInterval);
+      //   this.interval = this.interval/2;
+      //   return "time flies";
+      // }
     }, this.interval);
   },
   didYouGetBurned: function() {
@@ -24,10 +32,6 @@ export let flame = {
     } else {
       return true;
     }
-    // if (this.isTimeAlmostUp() == true) {
-    //   clearInterval(growthInterval);
-    //   this.interval = this.interval/2;
-    // };
   },
   douse: function(amount) {
     let that = this;

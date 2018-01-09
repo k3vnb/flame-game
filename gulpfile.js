@@ -27,7 +27,7 @@ gulp.task('jsBrowserify', ['concatInterface'], function() {
    return browserify({ entries: ['./tmp/allConcat.js']}) .transform(babelify.configure({ presets: ["es2015"] })) .bundle() .pipe(source('app.js')) .pipe(gulp.dest('./build/js')) });
 
 gulp.task('concatInterface', function(){
- return gulp.src(['js/*-interface.js'])
+ return gulp.src(['./js/*-interface.js'])
    .pipe(concat('allConcat.js'))
    .pipe(gulp.dest('./tmp'));
  });
@@ -99,7 +99,7 @@ gulp.task('serve', function() {
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
   gulp.watch(['*.html'], ['htmlBuild']);
-  gulp.watch(['scss/*.scss', 'scss/**/*.scss'], ['cssConcat']);
+  gulp.watch(['css/*.css', 'css/**/*.css'], ['cssConcat']);
 
 });
 
