@@ -1,11 +1,61 @@
-#counter {
-  height: 100px;
-  width: 100px;
-  background-color: lightgrey;
+.jumbotron {
+  text-align: center;
 }
 
+#counter {
+  height: 50px;
+  width: 100px;
+  padding: 2.5%;
+  background-color: lightgrey;
+  display: none;
+}
+#go {
+  height: 50px;
+  width: 50%;
+  background-color: #30ca30e0;
+  box-shadow: 0px 2px 3px;
+}
 #fire {
   background-image: url(../img/flame.gif);
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
+  pointer-events: none;
+  transition: 1s;
+}
+.change {
+  display: flex;
+  justify-content: space-around;
+}
+.change button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 2%;
+  color: white;
+  text-shadow: .5px .5px .5px black;
+  box-shadow: 1px 3px 3px #0000008c;
+}
+
+#match {
+  background-color: red;
+}
+#glass {
+  background-color: #00c0ff;
+}
+
+.visual {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.game-over {
+  display: none;
+  margin-top: 5vh;
+  font-size: 5em;
+  padding: 5%;
+  width: 500px;
+  height: 500px;
+  background-color: #ff2020a1;
+  box-shadow: 1px 2px 3px;
 }

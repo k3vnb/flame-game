@@ -26,13 +26,13 @@ export let flame = {
       return true;
     }
   },
-  isTimeAlmostUp: function() {
-    if (this.flameLevel < 50) {
-      return false;
-    } else {
-      return true;
-    }
-  },
+  // isTimeAlmostUp: function() {
+  //   if (this.flameLevel < 50) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // },
   douse: function(amount) {
     let that = this;
     return function(water) {
